@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apply - Assam Sports Scholarship</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>Assam Sports Scholarship Form</h1>
+  <form id="scholarshipForm">
+    <label for="district">District</label>
+    <input type="text" id="district" required>
+
+    <label for="member">Member Name</label>
+    <select id="member" required>
+      <option value="">-- Select Member --</option>
+      <option value="pritam">Pritam</option>
+      <option value="rajdeep">Rajdeep</option>
+      <option value="kunal">Kunal</option>
+    </select>
+
+    <label for="aadhaar">Aadhaar Number</label>
+    <input type="text" id="aadhaar" required>
+
+    <label for="student">Student Name</label>
+    <input type="text" id="student" required>
+
+    <label for="school">School Name</label>
+    <input type="text" id="school" required>
+
+    <label for="class">Class</label>
+    <input type="text" id="class" required>
+
+    <label for="roll">Roll Number</label>
+    <input type="text" id="roll" required>
+
+    <label for="bank">Bank Passbook Number</label>
+    <input type="text" id="bank" required>
+
+    <label for="paymentMode">Payment Method</label>
+    <select id="paymentMode" required>
+      <option value="">-- Select Payment Method --</option>
+      <option value="online">Online</option>
+      <option value="offline">Offline</option>
+    </select>
+
+    <div class="info-box">
+      <strong>Note:</strong>
+      <p>Form submission requires ₹100. Pay online or offline based on your selected method.</p>
+    </div>
+
+    <button type="submit" class="submit-btn">Submit Form</button>
+  </form>
+
+  <div class="card-output" id="cardOutput">
+    <div id="cardSection">
+      <h2>Scholarship Code Generated!</h2>
+      <p id="studentNameOutput"></p>
+      <p><strong>Code:</strong> <span id="codeOutput"></span></p>
+    </div>
+    <button onclick="downloadScreenshot()" class="download-btn">Download / Screenshot</button>
+    <button onclick="resetForm()" class="done-btn">Done</button>
+  </div>
+</body>
+</html>
